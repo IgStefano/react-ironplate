@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import api from "../../apis/api";
 import DeleteModal from "../../components/DeleteModal";
+import { Video } from "cloudinary-react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 export default function DetailsFromActivity() {
@@ -21,6 +22,10 @@ export default function DetailsFromActivity() {
     creatorURL: "",
   });
 
+  const videoIndex = activityData?.mediaURL?.indexOf("/pause/");
+
+  const publicId = activityData?.mediaURL?.slice(videoIndex + 7).split(".")[0];
+
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -38,12 +43,12 @@ export default function DetailsFromActivity() {
 
   return (
     <div>
-      <div className="buttons-to mt-5">
+      <div className="buttons-to mt-3">
         <Link to={`/activitylist`}>
           <ArrowBackIosNewIcon sx={{ color: "white" }} fontSize="large" />
         </Link>
       </div>
-      <div className="buttons-to mt-5">
+      <div className="buttons-to mt-4">
         <Link to={`/activityedit/${activityData._id}`}>
           <button className="btn btn-light btn-lg" style={{ color: "#965353" }}>
             Edit
@@ -57,9 +62,9 @@ export default function DetailsFromActivity() {
           Delete
         </button>
       </div>
-      <div className="admin-container m-5">
+      <div className="admin-container mx-5">
         <div className="admin-list">
-          <h1 className="m-5">{activityData.name}</h1>
+          <h1 className="mx-5 my-4">{activityData.name}</h1>
           <h2>{activityData.type}</h2>
           <h2>{activityData.duration} min</h2>
           <a
@@ -67,17 +72,37 @@ export default function DetailsFromActivity() {
             target="_blank"
             href={`https://${activityData.creatorURL}`}
           >
-            <h4>{activityData.creatorName}</h4>
+            <h4 style={{ textDecorationColor: "none", color: "#FFF9F0" }}>
+              {activityData.creatorName}
+            </h4>
           </a>
-          <p className="mt-5" style={{ fontSize: "18px" }}>
+          <p className="mt-3" style={{ fontSize: "18px" }}>
             {activityData.description}
           </p>
           <p style={{ fontSize: "18px" }}>{activityData.instructions}</p>
-          <a rel="noreferrer" target="_blank" href={activityData.mediaURL}>
-            <p style={{ fontSize: "18px" }}>
-              Click to view attached {activityData.mediaType}
-            </p>
-          </a>
+
+          <section className="d-flex flex-column justify-content-center align-items-center mb-2 pb-2">
+            {activityData.media === "image" ? (
+              <img
+                className=""
+                style={{
+                  // height: "29vh",
+                  width: "79vw",
+                  borderRadius: "15px",
+                }}
+                src={activityData.mediaURL}
+                alt={activityData.name}
+              />
+            ) : null}
+            {activityData.media === "video" ? (
+              <Video
+                cloudName="igor-stefano"
+                publicId={`${publicId}`}
+                controls={true}
+                style={{ width: "79vw", borderRadius: "15px" }}
+              />
+            ) : null}
+          </section>
         </div>
       </div>
       <DeleteModal

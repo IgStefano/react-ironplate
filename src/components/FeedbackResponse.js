@@ -82,15 +82,21 @@ export default function FeedbackResponse(props) {
           </p>
         </section>
         <section className="d-flex mx-3 justify-content-around">
-          <div>
-            <img alt="Facebook" src={FacebookIcon} />
-          </div>
-          <div>
-            <img alt="Instagram" src={InstagramIcon} />
-          </div>
-          <div>
-            <img alt="Twitter" src={TwitterIcon} />
-          </div>
+          <a href="https://facebook.com/">
+            <div>
+              <img alt="Facebook" src={FacebookIcon} />
+            </div>
+          </a>
+          <a href="https://instagram.com/">
+            <div>
+              <img alt="Instagram" src={InstagramIcon} />
+            </div>
+          </a>{" "}
+          <a href="https://twitter.com/">
+            <div>
+              <img alt="Twitter" src={TwitterIcon} />
+            </div>
+          </a>
         </section>
       </div>
     );

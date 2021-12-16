@@ -15,7 +15,7 @@ export default function ProfileOverview() {
           boxShadow: "0px 4px 20px 4px rgba(0, 0, 0, 0.25)",
           borderRadius: "15px",
           width: "90%",
-          height: "43vh",
+          height: "45vh",
         }}
       >
         <div style={{ width: "95vw" }}>

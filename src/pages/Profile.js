@@ -86,7 +86,10 @@ export default function Profile() {
       {profileState === "settings" ? <ProfileSettings /> : null}
       {profileState === "overview" ? <ProfileOverview /> : null}
       {profileState === "blocked" ? (
-        <ProfileBlocked currentUserObj={currentUserObj} />
+        <ProfileBlocked
+          loggedInUser={loggedInUser}
+          currentUserObj={currentUserObj}
+        />
       ) : null}
     </div>
   );

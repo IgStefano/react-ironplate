@@ -133,6 +133,11 @@ textarea {
   text-align: center;
 }
 
+.toggleRemove {
+  visibility: hidden;
+  display: none;
+}
+
 .calendar {
   text-align: center;
   max-width: 90%;
