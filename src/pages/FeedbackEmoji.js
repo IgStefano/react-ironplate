@@ -54,9 +54,7 @@ export default function FeedbackEmoji() {
         const response = await api.patch(`/profile/${loggedInUser.user._id}`, {
           blockedActivities: [...blockedActivities, currentOption._id],
         });
-        console.log(response.data.blockedActivities);
       }
-      console.log(blockedActivities);
     } catch (err) {
       console.error(err);
     }
@@ -72,9 +70,7 @@ export default function FeedbackEmoji() {
         const response = await api.patch(`/profile/${loggedInUser.user._id}`, {
           favorites: [...favorites, currentOption._id],
         });
-        console.log(response.data.favorites);
       }
-      console.log(favorites);
     } catch (err) {
       console.error(err);
     }

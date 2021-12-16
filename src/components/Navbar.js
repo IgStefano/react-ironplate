@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const { loggedInUser, logout } = useContext(AuthContext);
-  console.log(loggedInUser);
 
   return (
     <div className="m-4 pt-3 d-flex justify-content-between">

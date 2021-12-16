@@ -24,9 +24,9 @@ export default function StartActivity() {
     fetchActivity();
   }, []);
 
-  // const videoIndex = currentActivityObj.mediaURL.indexOf("/pause/");
+  const videoIndex = currentActivityObj?.mediaURL?.indexOf("/pause/");
 
-  // const id = currentActivityObj.mediaURL.slice(videoIndex + 7).split(".")[0];
+  const id = currentActivityObj?.mediaURL?.slice(videoIndex + 7).split(".")[0];
 
   console.log(currentActivityObj);
 
@@ -71,9 +71,9 @@ export default function StartActivity() {
             {currentActivityObj.media === "video" ? (
               <Video
                 cloudName="igor-stefano"
-                // publicId={`${id}`}
+                publicId={`${id}`}
                 controls="true"
-                style={{ height: "26vh", borderRadius: "15px" }}
+                style={{ width: "79vw", borderRadius: "15px" }}
               />
             ) : null}
 
