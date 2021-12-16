@@ -21,6 +21,7 @@ import ActivityList from "../pages/admin/ActivityList";
 import DetailsFromActivity from "../pages/admin/DetailsFromActivity";
 import ActivityEdit from "../pages/admin/ActivityEdit";
 import ActivityDelete from "../pages/admin/ActivityDelete";
+import ChangeUserInfo from "./Profile/ChangeUserInfo";
 
 function App() {
   return (
@@ -47,6 +48,14 @@ function App() {
           path="/adminpanel"
           element={<ProtectedRoute component={AdminPanel} />}
         />
+        <Route
+          path="/profile"
+          element={<ProtectedRoute component={Profile} />}
+        />
+        <Route
+          path="/changeuserinfo"
+          element={<ProtectedRoute component={ChangeUserInfo} />}
+        />
 
         <Route path="/submissioncomplete" element={<SubmissionComplete />} />
         <Route path="/activitylist" element={<ActivityList />} />
@@ -58,7 +67,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/activity/:id" element={<StartActivity />} />
         <Route path="/feedback/:id" element={<FeedbackEmoji />} />
-        <Route path="/profile" element={<Profile />} />
       </Routes>
     </AuthContextComponent>
   );

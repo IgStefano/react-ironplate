@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import api from "../../apis/api";
 
 function Signup(props) {
   const [state, setState] = useState({ name: "", password: "", email: "" });
@@ -22,6 +23,7 @@ function Signup(props) {
     event.preventDefault();
 
     try {
+      const response = await api.post("/signup", state);
       setErrors({ name: "", password: "", email: "" });
       navigate("/login");
     } catch (err) {
@@ -35,7 +37,7 @@ function Signup(props) {
   }
 
   return (
-    <div className="entry-card m-4 shadow-lg p-1 mb-5">
+    <div className="login-container m-4 shadow-lg p-1 mb-5">
       <form onSubmit={handleSubmit}>
         <div className="p-2">
           <label htmlFor="signupFormName" />
