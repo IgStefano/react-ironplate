@@ -65,8 +65,6 @@ export default function ActivityCreate() {
 
       const response = await api.post("/upload", uploadData);
 
-      console.log(response);
-
       return response.data.url;
     } catch (err) {
       console.error(err);
@@ -87,7 +85,6 @@ export default function ActivityCreate() {
         mediaURL,
       });
 
-      console.log(response);
       setLoading(false);
       navigate("/submissioncomplete");
     } catch (err) {
