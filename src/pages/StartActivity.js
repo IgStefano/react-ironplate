@@ -70,7 +70,7 @@ export default function StartActivity() {
             ) : null}
             {currentActivityObj.media === "video" ? (
               <Video
-                cloudName="igor-stefano"
+                cloudName={process.env.CLOUDINARY_NAME}
                 publicId={`${id}`}
                 controls="true"
                 style={{ width: "79vw", borderRadius: "15px" }}
