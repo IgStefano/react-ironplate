@@ -1,6 +1,10 @@
 # PAUSE
 
+<<<<<<< HEAD
 A digital mobile website for short-timed wellness activities. Developed by Igor Stefano (https://github.com/IgStefano/) and William Galvão (https://github.com/William-Galvao/). UX Design by Romy von Erlea, Bianca Harari, Mayra Lima and Rebeca Cortez. It was developed in just over one week as the final project of the Ironhack Web Development Bootcamp in December 2021.
+=======
+A digital mobile website for short-timed wellness activities. Developed by Igor Stefano (https://github.com/IgStefano/) and William Galvão (https://github.com/William-Galvao/). UX Design by Romy von Erlea (https://www.linkedin.com/in/romyvonerlea), Bianca Harari, Mayra Lima (https://www.linkedin.com/in/mayra-alves-lima/) and Rebeca Cortez (https://github.com/rebecacortez). It was developed in just over one week as the final project of the Ironhack Web Development Bootcamp in December 2021.
+>>>>>>> 8430ed0486a2c7797835329e9176f765f1acfab1
 
 ## Technical Details
 
@@ -24,4 +28,8 @@ Any user can sign-up for a free account and immediately start accessing PAUSE's 
 
 ## Special Thanks
 
+<<<<<<< HEAD
 We would like to thank everyone at the Ironhack Teaching Team for basically making this possible. We would also like to thank our families for not giving up on us during the seemingly unending final week of the bootcamp. Last but not least, thank you for reading until the end. We hope you enjoy your PAUSE.
+=======
+We would like to thank everyone at the Ironhack Teaching Team for basically making this possible. We would also like to thank our families for their incredible support during the seemingly unending final week of the bootcamp. Last but not least, thank you for reading until the end. We hope you enjoy your PAUSE.
+>>>>>>> 8430ed0486a2c7797835329e9176f765f1acfab1
