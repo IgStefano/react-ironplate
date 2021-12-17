@@ -39,7 +39,6 @@ export default function ChangeUserInfo() {
 
       const response = await api.post("/upload", uploadData);
 
-      console.log(response);
 
       return response.data.url;
     } catch (err) {
