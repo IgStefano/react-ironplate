@@ -19,7 +19,6 @@ export default function FeedbackEmoji() {
       try {
         const response = await api.get(`/activities/${params.id}`);
         setCurrentActivityObj(response.data);
-        console.log(currentActivityObj);
       } catch (err) {
         console.error(err);
       }
