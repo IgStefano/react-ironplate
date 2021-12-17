@@ -15,9 +15,7 @@ export default function ActivityCard(props) {
           blockedActivities: [...props.blockedActivities, currentOption._id],
         });
         props.selectRandomOption(`${props.pageState}Arr`);
-        console.log(response.data.blockedActivities);
       }
-      console.log(props.blockedActivities);
     } catch (err) {
       console.error(err);
     }

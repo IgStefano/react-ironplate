@@ -92,7 +92,6 @@ export default function Home() {
         !blockedActivities.includes(randomOption.id)
       ) {
         activitiesToShow.push(randomOption);
-        console.log(activitiesToShow);
       }
     }
     return activitiesToShow;

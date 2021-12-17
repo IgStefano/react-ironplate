@@ -7,7 +7,6 @@ export default function ActivityDescription(props) {
   const [currentActivity, setCurrentActivity] = useState({});
   const [currentActivityIndex, setCurrentActivityIndex] = useState(0);
 
-  console.log(props.blockedActivities);
 
   return (
     <div>
