@@ -19,8 +19,6 @@ export default function ActivityList() {
     fetchActivities();
   }, []);
 
-  console.log(activityList);
-
   return (
     <div>
       <div className="buttons-to mt-5">

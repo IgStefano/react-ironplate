@@ -1,31 +1,27 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# PAUSE
 
-# React IronPlate
+A digital mobile website for short-timed wellness activities. Developed by Igor Stefano (https://github.com/IgStefano/) and William Galvão (https://github.com/William-Galvao/). UX Design by Romy von Erlea, Bianca Harari, Mayra Lima and Rebeca Cortez. It was developed in just over one week as the final project of the Ironhack Web Development Bootcamp in December 2021.
 
-Esse boilerplate já inclui:
+## Technical Details
 
-- Pré-configuração do Axios para injeção de cabeçalhos de autenticação e BaseURL
-- Context para armazenar state de usuário logado
-- Forms de Login e Signup
-- Roteamento básico
-- Componente de rota protegida
+PAUSE is a full-stack web application. Its repositories can be found here: https://github.com/William-Galvao/ironrest (back-end) and here: https://github.com/William-Galvao/react-ironplate (front-end). It was fully developed using JavaScript and its frameworks. React for the front-end, while Express handled the back. MongoDB was used as a database, completing the so-called MERN stack.
 
-## Para Começar
+## What Is PAUSE?
 
-- Faça o fork e clone deste repositório
+PAUSE was born out of a concern about wellness - mental and physical - as the effects of the pandemic started to branch out beyond the risk of the virus itself. After researching about consumer habits and wishes, the concept of an app that would ease the pains of practicing activities focused on well-being.
 
-## Instalação
+PAUSE gives you daily suggestions of short activities - both mental and physical, both indoors and outdoors - so that the user can feel empowered and, at the same time, encouraged to pursue their own wellness, one PAUSE at a time.
 
-```shell
-$ npm install
-```
+## How to Use It
 
-## Deploy no Netlify
+Any user can sign-up for a free account and immediately start accessing PAUSE's activities. It goes like this:
 
-1. Faça login no Netlify e selecione seu repositório
-2. Em 'Deploy settings > build command' escreva: CI=false npm run build
-3. Em 'publish directory' escreva: build/
-4. No arquivo `apis/api.js`, preencha a URL do seu servidor Express deployado no objeto `apis`, chave `production`
-5. Adicione a URL do seu app hospedado no Netlify nas variáveis de ambiente do backend no Heroku
+1. Create an account and log-in PAUSE's website;
+   1.1) Press the icon in the top-left corner to access your profile and upload a picture of yourself (optional);
+2. Select whether you want indoors or outdoors activities;
+3. Choose one of the three options we chose for you;
+4. Follow the instructions and leave a feedback to let us know how you liked it!
 
-Happy coding! 💙
+## Special Thanks
+
+We would like to thank everyone at the Ironhack Teaching Team for basically making this possible. We would also like to thank our families for not giving up on us during the seemingly unending final week of the bootcamp. Last but not least, thank you for reading until the end. We hope you enjoy your PAUSE.

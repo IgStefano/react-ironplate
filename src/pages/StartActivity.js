@@ -14,7 +14,6 @@ export default function StartActivity() {
         .get(`/activities/${params.id}`)
         .then((response) => {
           const currentActivity = response.data;
-          console.log(currentActivity);
           setCurrentActivityObj(currentActivity);
         })
         .catch((error) => {
@@ -27,8 +26,6 @@ export default function StartActivity() {
   const videoIndex = currentActivityObj?.mediaURL?.indexOf("/pause/");
 
   const id = currentActivityObj?.mediaURL?.slice(videoIndex + 7).split(".")[0];
-
-  console.log(currentActivityObj);
 
   return (
     <div className="d-flex flex-column">

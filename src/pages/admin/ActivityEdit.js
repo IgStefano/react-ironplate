@@ -51,8 +51,6 @@ export default function ActivityEdit() {
 
       const response = await api.post("/upload", uploadData);
 
-      console.log(response);
-
       return response.data.url;
     } catch (err) {
       console.error(err);
@@ -73,7 +71,6 @@ export default function ActivityEdit() {
         mediaURL,
       });
 
-      console.log(response);
       setLoading(false);
 
       navigate("/submissioncomplete");
